@@ -15,7 +15,7 @@ common-ext-js:
     sri: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-common-js:
+common-js: 
   - "/assets/js/main.js"
 ---
 
@@ -26,15 +26,24 @@ common-js:
 
   <body>
 
+    <div id="page-container">
+
     {% include gtm_body.html %}
 
+    <!-- disable nav -->
     {% include nav.html %}
 
-    {{ content }}
+    <div id="content-wrap">
+      {{  content }}
+    </div>
 
     {% include footer.html %}
+    
+    </div>
 
     {% include footer-scripts.html %}
+
+
 
   </body>
 </html>
